@@ -1,0 +1,14 @@
+<template>
+  <require from="./heroes-component.scss"></require>
+
+  <h2>My Heroes</h2>
+  <ul class="heroes">
+    <li repeat.for="hero of heroes" 
+      class="${(hero === selectedHero) ? 'selected' : ''}"
+      click.delegate="onSelect(hero)">
+      <span class="badge">${hero.id}</span> ${hero.name}
+    </li>
+  </ul>
+
+  <hero-details-component hero.bind="selectedHero"></hero-details-component>
+</template>

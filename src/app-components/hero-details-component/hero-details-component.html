@@ -1,0 +1,11 @@
+<template bindable="hero">
+  
+  <div if.bind="hero">
+    <h2>${hero.name.toUpperCase()} Details</h2>
+    <div><span>id: </span>${hero.id}</div>
+    <div>
+      <label for="hero-name">Hero name: </label>
+      <input id="hero-name" value.bind="hero.name" placeholder="name">
+    </div>
+  </div>
+</template>
