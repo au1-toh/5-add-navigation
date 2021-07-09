@@ -3,7 +3,14 @@
 
   <h1>${title}</h1>
 
-  <heroes-component></heroes-component>
+  <nav>
+    <a route-href="route: dashboard">Dashboard</a>
+    <a route-href="route: heroes">Heroes</a>
+  </nav>
+  
+  <!-- <heroes-component></heroes-component> -->
 
+  <router-view></router-view>
+  
   <messages-component></messages-component>
 </template>

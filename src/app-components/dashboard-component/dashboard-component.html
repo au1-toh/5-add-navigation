@@ -1,0 +1,13 @@
+<template>
+  <require from="./dashboard-component.scss"></require>
+
+  <h2>Top Heroes</h2>
+  
+  <div class="heroes-menu">
+    <a repeat.for="hero of heroes"
+      href="#/details/${hero.id}">
+      ${hero.name}
+    </a>
+  </div>
+
+</template>

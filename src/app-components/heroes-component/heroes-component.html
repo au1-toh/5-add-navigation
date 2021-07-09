@@ -3,12 +3,11 @@
 
   <h2>My Heroes</h2>
   <ul class="heroes">
-    <li repeat.for="hero of heroes" 
-      class="${(hero === selectedHero) ? 'selected' : ''}"
-      click.delegate="onSelect(hero)">
-      <span class="badge">${hero.id}</span> ${hero.name}
+    <li repeat.for="hero of heroes">
+      <a href="#/details/${hero.id}">
+        <span class="badge">${hero.id}</span> ${hero.name}
+      </a>
     </li>
   </ul>
-
-  <hero-details-component hero.bind="selectedHero"></hero-details-component>
+  
 </template>

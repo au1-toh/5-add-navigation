@@ -2,12 +2,15 @@ import { Hero, HEROES } from "model";
 
 export class HeroDataService {
   
-  //constructor(/*private messageService: MessageService*/) { }
-
   public async getHeroes(): Promise<Hero[]> {
-    //this.messageService.add('HeroService: fetched heroes');
     return new Promise<Hero[]>(resolve => {      
         resolve(HEROES);             
+      });
+  }
+
+  public async getHero(id: number): Promise<Hero> {
+    return new Promise<Hero>(resolve => {      
+        resolve(HEROES.find(h => h.id === id));             
       });
   }
 }
